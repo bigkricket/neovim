@@ -14,16 +14,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  { import = "nconf.lsp" },
   {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("gitsigns").setup()
-    end,
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      vim.lsp.enable("rust_analyzer")
     end,
   },
   {
@@ -40,9 +35,9 @@ require("lazy").setup({
     config = true,
   },
   {
-     "ThePrimeagen/harpoon",
-     branch = "harpoon2", -- newer version
-     dependencies = { "nvim-lua/plenary.nvim" },
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
   {
     "ellisonleao/gruvbox.nvim",
