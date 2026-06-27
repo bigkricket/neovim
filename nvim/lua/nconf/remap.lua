@@ -28,3 +28,15 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "References" })
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover docs" })
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Hover diagnostics" })
+
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
